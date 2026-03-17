@@ -21,7 +21,7 @@ class ApartmentSettlement(BaseModel):
     year: int               
     total_bills: float      
     total_rent: float       
-    amount_due: float
+    amount_to_pay: float
 
 class Apartment(BaseModel):
     key: str

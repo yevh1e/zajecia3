@@ -16,12 +16,13 @@ class Room(BaseModel):
     area_m2: float
 
 class ApartmentSettlement(BaseModel):
-    apartment_key: str     
+    apartment_key: int     
     month: str              
     year: int               
     total_bills: float      
     total_rent: float       
     amount_to_pay: float
+    fanally: True
 
 class Apartment(BaseModel):
     key: str

@@ -39,6 +39,7 @@ class Apartment(BaseModel):
         return {key: Apartment(**apartment) for key, apartment in data.items()}
 
 
+
 class Tenant(BaseModel):
     name: str
     apartment: str
@@ -107,6 +108,14 @@ class Manager:
         self.transfers = Transfer.from_json_file(self.parameters.transfers_json_path)
         self.bills = Bill.from_json_file(self.parameters.bills_json_path)
 
+class TenantSettlement(BaseModel):
+    which_tenants: str 
+    month: str 
+    year: str
+    apartment_id: int 
+    rent_amount: float
+    bills_amount: float 
+    total_transfers: float
 
 if __name__ == '__main__':
     parameters = Parameters()

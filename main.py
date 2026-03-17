@@ -22,7 +22,7 @@ class ApartmentSettlement(BaseModel):
     total_bills: float      
     total_rent: float       
     amount_to_pay: float
-    fanally: True
+    additional_info: str
 
 class Apartment(BaseModel):
     key: str

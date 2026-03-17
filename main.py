@@ -16,7 +16,7 @@ class Room(BaseModel):
     area_m2: float
 
 class ApartmentSettlement(BaseModel):
-    apartment_key: str     
+    apartment_key: int     
     month: str              
     year: int               
     total_bills: float      
